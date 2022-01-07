@@ -2316,7 +2316,6 @@ process Mutect2 {
       -I ${bamNormal} -normal ${idSampleNormal} \
       ${intervalsOptions} \
       ${softClippedOption} \
-      --germline-resource ${germlineResource} \
       ${PON} \
       -O ${intervalBed.baseName}_${idSampleTumor}_vs_${idSampleNormal}.vcf
     """
@@ -2362,7 +2361,6 @@ process Mutect2Single {
       -I ${bamTumor}  -tumor ${idSampleTumor} \
       ${intervalsOptions} \
       ${softClippedOption} \
-      --germline-resource ${germlineResource} \
       ${PON} \
       -O ${intervalBed.baseName}_${idSampleTumor}.vcf
     """
